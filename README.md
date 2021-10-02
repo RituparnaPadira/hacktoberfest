@@ -1,4 +1,4 @@
-# Hactober2021
+# Hacktober2021
 
 ## Hello coders !
 ### This is a simple repository to help beginners start off their hactober journey
