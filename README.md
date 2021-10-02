@@ -1,7 +1,7 @@
 # Hacktober2021
 
 ## Hello coders !
-### This is a simple repository to help beginners start off their hactober journey
+### This is a simple repository to help beginners start off their hacktober journey
 #  
 ## What can you do ?
 #### You can contribute to this repository in the following ways:
