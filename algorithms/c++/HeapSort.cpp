@@ -6,7 +6,7 @@ greater than or equal to it in the case of a min heap.
 
 This is a max heap sort algorithm!
 
-author: @whyanujjwhy
+contributor: @whyanujjwhy
 
 */
 
