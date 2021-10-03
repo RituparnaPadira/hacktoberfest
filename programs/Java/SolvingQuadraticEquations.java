@@ -8,7 +8,7 @@ class Main
         int a,b,c,dis;
         float root1,root2;
        
-        System.out.println("Enter a, b & c values");
+        System.out.println("Enter values of a, b & c");
         DataInputStream sc = new DataInputStream(System.in);
         
         a=Integer.parseInt(sc.readLine());
