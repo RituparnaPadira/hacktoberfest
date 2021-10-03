@@ -3,11 +3,11 @@ using namespace std;
 
 int main()
 {
-	int arr[5];
+	int A[5];
 	
 	for(int i=0; i<5; i++)
 	{
-		cin>>arr[i];                
+		cin>>A[i];                
 	}
 	
 	int curr=0;
@@ -15,7 +15,7 @@ int main()
 	
 	for(int i=0; i<5; i++)
 	{
-		curr=max(arr[i], arr[i]+curr);
+		curr=max(A[i], A[i]+curr);
 		max1=max(max1,curr);
 	}
 	
