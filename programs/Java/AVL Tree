@@ -1,0 +1,97 @@
+package practice;
+
+public class AVLtree {
+	private class Node{
+		int data;
+		Node left;
+		Node right;
+		int height;
+		Node(int data){
+			this.data=data;
+			this.height=1;
+		}
+	}
+	private Node root;
+	
+	public void insert(int val) {
+		root=insert(this.root,val);
+	}
+	public Node insert(Node node,int item) {
+		if(node==null) {
+			Node nn=new Node(item);
+			nn.data=item;
+			return nn;
+		}
+		if(item>node.data) {
+			node.right=insert(node.right,item);
+		}else if(item<node.data) {
+			node.left=insert(node.left,item);
+		}
+		node.height=Math.max(ht(node.left),ht(node.right))+1;
+		
+		int bf=bf(node);
+		
+		//ll
+		if(bf>1 && item<node.left.data) {
+			return rightRotate(node);
+		}
+		
+		//lr
+		if(bf>1 && item>node.left.data) {
+			node.left=leftRotate(node.left);
+			return rightRotate(node);
+		}
+		
+		
+		//rl
+		if(bf<-1 && node.right.data>item) {
+			node.right=rightRotate(node.right);
+			return leftRotate(node);
+		}
+		
+		//rr
+		
+		if(bf<-1 && node.right.data<item) {
+			return leftRotate(node);
+		}
+		return node;
+	}
+	public Node rightRotate(Node c) {
+		Node b=c.left;
+		Node t=b.right;
+		
+		b.right=c;
+		c.left=t;
+		
+		b.height=Math.max(ht(b.left),ht(b.right))+1;
+		c.height=Math.max(ht(c.left), ht(c.right))+1;
+		
+		return b;
+	}
+	
+	public Node leftRotate(Node c) {
+		Node b=c.right;
+		Node t=b.left;
+		
+		//
+		b.left=c;
+		c.right=t;
+		
+		b.height=Math.max(ht(b.left),ht(b.right))+1;
+		c.height=Math.max(ht(c.left), ht(c.right))+1;
+		
+		return b;
+		
+	}
+	public int bf(Node node) {
+		if(node==null)
+			return 0;
+		return ht(node.left)-ht(node.right);
+	}
+	public int ht(Node node) {
+		if(node==null)
+			return 0;
+		return node.height;
+	}
+
+}
