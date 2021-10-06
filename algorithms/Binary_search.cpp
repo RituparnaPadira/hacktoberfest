@@ -20,25 +20,8 @@ int B_search(int a[], int l, int r, int ele)
 
     return -1;
 }
-//Iterative
-int Bi_search(int a[], int l, int h, int x)
-{
-    while (l <= h)
-    {
-        int k = l + (h - l) / 2;
-
-        if (a[k] == x)
-            return k;
-
-        else if (a[k] < x)
-            l = k + 1;
-
-        else
-            h = h - 1;
-    }
-
-    return -1;
-}
+            
+   
 
 int main()
 {
