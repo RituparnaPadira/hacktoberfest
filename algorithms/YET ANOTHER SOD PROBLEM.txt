@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+#define ll long long int
+using namespace std;
+int main() {
+	// your code goes here
+	ll t;
+	cin>>t;
+	while(t--)
+	{
+	   
+	    ll l,r;
+	    cin>>l>>r;
+	   
+	        if(l%3==0)
+	            
+	            cout<<(r/3)-(l/3)+1<<endl;
+	            else cout<<(r/3)-(l/3)<<endl;
+	    }
+	    
+	   
+	  
+	return 0;
+}
