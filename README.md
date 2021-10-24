@@ -11,4 +11,5 @@
 ####  ( If you want to use any other subgroup, you can add a folder under the algorithms folder) 
 #### -> Contribute a technical blog in the blogs folder.
 #  
+# Happy :) Hacktoberfest2021
 ## Happy Coding !
